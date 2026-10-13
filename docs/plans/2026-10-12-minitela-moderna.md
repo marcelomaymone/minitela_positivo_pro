@@ -328,15 +328,23 @@ public async Task Should_Enqueue_And_Process_Packets_Without_Blocking_Caller()
 
 ---
 
-### Tarefa 8: Interface de Configuração Windows 11 e System Tray (WPF-UI)
+### Tarefa 8: Interface de Configuração Windows 11 e System Tray (WPF-UI com /impeccable)
 **Arquivos:**
 - Criar: `src/MiniTelaModern.App/Views/MainWindow.xaml`
 - Criar: `src/MiniTelaModern.App/ViewModels/MainViewModel.cs`
 - Criar: `src/MiniTelaModern.App/ViewModels/TrayIconViewModel.cs`
 - Criar: `src/MiniTelaModern.App/App.xaml`
+- Criar: `docs/bmad/2-arquitetura/DESIGN.md` (Design tokens & UI Guide)
+
+**Diretriz Obrigatória de UX/UI (/impeccable):**
+- A arquitetura, hierarquia visual, design tokens e refinamento de interface devem seguir estritamente a skill `/impeccable` (`craft-floor.md`, `polish`, `harden`, `colorize`, `layout`):
+  - Modo: **Operate** (foco em escaneabilidade, zero poluição visual, alto contraste e affordances nativas do Windows 11 26H2).
+  - Tipografia: Segoe UI Variable com hierarquia tipográfica precisa.
+  - Densidade e Diagramação do Display LCD (240x240): Otimização cirúrgica de caracteres (limite de 13/14 caracteres por linha), contraste estrito e ausência de elementos truncados de forma deselegante.
+  - Micro-animações e Materiais: Uso de *Mica* / *MicaAlt* e cantos arredondados nativos do Windows 11 26H2.
 
 **Implementação:**
-- Desenvolver interface visual com biblioteca `Wpf.Ui` aplicando controles Fluent, efeito visual Mica e suporte automático a Dark/Light Mode do Windows 11.
+- Desenvolver interface visual com biblioteca `Wpf.Ui` aplicando controles Fluent, efeito visual Mica e suporte automático a Dark/Light Mode do Windows 11 26H2.
 - Ícone na Área de Notificação (System Tray) com menu de contexto:
   - Alternar tela (Páginas 0 a 6).
   - Controle deslizante de Brilho (0% a 100%).
@@ -350,7 +358,7 @@ public async Task Should_Enqueue_And_Process_Packets_Without_Blocking_Caller()
   - **Notificações:** Filtro de aplicativos autorizados.
   - **Clima:** Seleção de cidade (busca automática via geocoding Open-Meteo).
   - **Imagens e GIFs:** Prévia visual segura e envio para gravação.
-- Commit: `feat(ui): implement modern Windows 11 Fluent interface with WPF-UI and System Tray`.
+- Commit: `feat(ui): implement modern Windows 11 Fluent interface with WPF-UI and System Tray adhering to impeccable craft`.
 
 ---
 
